@@ -4,6 +4,7 @@ import { federation } from '@module-federation/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'http://localhost:3001',
   plugins: [
     react(),
     federation({
