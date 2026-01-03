@@ -10,7 +10,9 @@ export default defineConfig({
       name: 'header-app',
       manifest: true,
       remotes: {},
-      exposes: {},
+      exposes: {
+        './Header': './src/components/Header.jsx',
+      },
       shared: {
         react: {
           singleton: true,
@@ -22,6 +24,11 @@ export default defineConfig({
     })
   ],
   server: {
+    origin: 'http://localhost:3001',
+    port: 3001
+  },
+  preview: {
+    origin: 'http://localhost:3001',
     port: 3001
   }
 })

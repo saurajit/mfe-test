@@ -9,7 +9,9 @@ export default defineConfig({
     federation({
       name: 'host-app',
       manifest: true,
-      remotes: {},
+      remotes: {
+        headerApp: "header-app@http://localhost:3001/mf-manifest.json",
+      },
       exposes: {},
       shared: {
         react: {
@@ -22,6 +24,9 @@ export default defineConfig({
     })
   ],
   server: {
+    port: 3000
+  },
+  preview: {
     port: 3000
   }
 })
