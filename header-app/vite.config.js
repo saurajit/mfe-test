@@ -10,7 +10,9 @@ export default defineConfig({
     federation({
       name: 'header-app',
       manifest: true,
-      remotes: {},
+      remotes: {
+        store: "store@http://localhost:3003/mf-manifest.json",
+      },
       exposes: {
         './Header': './src/components/Header.jsx',
       },

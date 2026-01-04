@@ -11,6 +11,7 @@ export default defineConfig({
       manifest: true,
       remotes: {
         headerApp: "header-app@http://localhost:3001/mf-manifest.json",
+        store: "store@http://localhost:3003/mf-manifest.json",
       },
       exposes: {},
       shared: {

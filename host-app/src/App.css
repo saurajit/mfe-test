@@ -8,3 +8,7 @@
 .card {
   padding: 2em;
 }
+
+button + button {
+  margin-left: 10px;
+}
